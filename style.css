@@ -63,5 +63,9 @@ form {
     margin: 3rem auto;
     width: 90vw;
     max-width: 700px;
+}
 
+.container p {
+    color: gray;
+    line-height: 1.5rem;
 }
