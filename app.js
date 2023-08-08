@@ -25,7 +25,14 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const value = input.value;
   const randomNumber = Math.floor(Math.random() * loremText.length);
-  if (!value || value > 9 || value < 0) {
+  if (!value || value > 9 || value < 0 || value == 1) {
     container.innerHTML = `<p>${loremText[randomNumber]}</p>`;
+  } else {
+    const newArray = loremText.slice(0, value);
+    container.innerHTML = newArray
+      .map((item) => {
+        return `<p>${item}</p>`;
+      })
+      .join('');
   }
 });
